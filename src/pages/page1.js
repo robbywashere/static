@@ -7,4 +7,4 @@ export const Page1 = () => (
   </div>
 );
 
-ReactDOM.hydrate(<App />, document.querySelector("#target"));
+ReactDOM.hydrate(<Page1 />, document.querySelector("#target"));
