@@ -13,6 +13,7 @@ module.exports = {
     "@babel/preset-react"
   ],
   plugins: [
+    "preval",
     "babel-plugin-styled-components",
     "@babel/plugin-proposal-class-properties",
     "@babel/plugin-proposal-object-rest-spread"
