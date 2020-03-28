@@ -1,10 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Main } from "../layout/main";
 
-export const Page1 = () => (
-  <div>
-    <h1>Page1 :)</h1>
-  </div>
+const Page1 = () => (
+  <Main>
+    <div>
+      <h1>Page1 :)</h1>
+    </div>
+  </Main>
 );
 
-ReactDOM.hydrate(<Page1 />, document.querySelector("#target"));
+ReactDOM.render(<Page1 />, document.querySelector("#target"));

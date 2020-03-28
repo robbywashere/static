@@ -1,0 +1,7 @@
+@import './colors.scss';
+:root {
+  @each $key, $value in $colors {
+    --color-#{$key}: #{$value};
+  }
+}
+
