@@ -3,16 +3,16 @@ import React from "react";
 import "../styles/reset.scss";
 import "../styles/custom.scss";
 import "../styles/main.scss";
-import { purple, lavender, teal, bigTeal, gold, red, white } from "styles/colors.scss";
+import { _bigTeal, _white } from "styles/colors.scss";
 import PostData from "posts.meta";
 
 const Nav = styled.div`
   height: 55px;
-  color: ${white};
+  color: ${_white};
   display: flex;
   justify-content: space-between;
   line-height: 55px;
-  background: ${bigTeal};
+  background: ${_bigTeal};
   padding-left: 33px;
   box-shadow: 0px 4px 6px 1px rgba(0, 0, 0, 0.0675);
 `;
@@ -26,7 +26,7 @@ Nav.Links = styled.div`
   & > * {
     margin-right: 33px;
     text-transform: uppercase;
-    color: ${white};
+    color: ${_white};
     text-decoration: none;
   }
 `;

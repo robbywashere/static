@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import StyledComponent from "../StyledComponent";
 import { Main } from "layout/main";
 import styled from "styled-components";
-import { bigTeal, teal, lavender, gold, purple, gray } from "../styles/colors.scss";
+import { _bigTeal, _teal, _lavender, _gold, _purple, _gray } from "../styles/colors.scss";
 import PostData from "posts.meta";
 import { format } from "date-fns";
 // import Button from "react-bulma-components/lib/components/button"; //import from src, not lib
@@ -12,7 +12,7 @@ const Container = styled.div`
   max-width: 900px;
 `;
 
-const PostImg = styled.div/* css */ `
+const PostImg = styled.div`
   display: inline-block;
   width: 100px;
   height: 100px;
@@ -25,7 +25,7 @@ const PostImg = styled.div/* css */ `
 
 const PostContent = styled.div`
   margin-left: 11px;
-  border-left: 1px dashed ${gold};
+  border-left: 1px dashed ${_gold};
   min-width: 0;
   padding-left: 11px;
 `;
@@ -38,9 +38,9 @@ const PostCard = styled.a`
   align-items: center;
   justify-content: flex-start;
   box-shadow: 0px 4px 6px 1px rgba(0, 0, 0, 0.0675);
-  border-bottom: 3px solid ${gold};
+  border-bottom: 3px solid ${_gold};
   &:hover {
-    background: ${gray};
+    background: ${_gray};
   }
 `;
 

@@ -22,7 +22,9 @@ const pageTmpl = ({ name, file, slug, isDev }) =>
 
 const PAGES_HTML = (isDev) => Object.entries(PAGE_ENTRIES).map(([name, file]) => pageTmpl({ name, file, isDev }));
 const POSTS_HTML = (isDev) =>
-  Object.entries(POSTS_META).map(([name, meta]) => pageTmpl({ name, slug: meta.matter.slug, file: meta.path, isDev }));
+  Object.entries(POSTS_META).map(([name, meta]) =>
+    pageTmpl({ name, slug: meta.matter.slug, file: meta.virtualPath, isDev })
+  );
 
 module.exports = (env, argv) => ({
   entry: {

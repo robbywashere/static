@@ -1,17 +1,22 @@
 $colors: (
-  purple: rgba(141, 106, 159, 1),
-  lavender: rgba(197, 203, 211, 1),
-  teal: rgba(140, 188, 185, 1),
-  gold: rgba(221, 164, 72, 1),
-  red: rgba(187, 52, 47, 1),
-  gray: #fbfbfb,
-  bigTeal: #48c1dd,
-  white: #fff,
+  _white: #fff,
+  _purple: rgba(141, 106, 159, 1),
+  _lavender: rgba(197, 203, 211, 1),
+  _teal: rgba(140, 188, 185, 1),
+  _gold: rgba(221, 164, 72, 1),
+  _red: rgba(187, 52, 47, 1),
+  _gray: #fbfbfb,
+  _bigTeal: #48c1dd,
 );
 
 :export {
   @each $key, $value in $colors {
     #{$key}: $value;
+  }
+}
+:root {
+  @each $key, $value in $colors {
+    --color_#{$key}: #{$value};
   }
 }
 @function color($color-name) {
